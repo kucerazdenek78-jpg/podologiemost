@@ -569,7 +569,7 @@ const dots=[...document.querySelectorAll('.hero-dots button')];
 let cur=0,timer;
 // Videa na pravé straně – střídají se spolu se slidy
 const mediaVids=[...document.querySelectorAll('.hero-media video')];
-const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduceMotion=false;
 function showVid(i){
   if(!mediaVids.length||reduceMotion)return;
   mediaVids.forEach((v,k)=>{
