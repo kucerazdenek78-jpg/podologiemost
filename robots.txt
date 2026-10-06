@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kucerazdenek78-jpg.github.io/podologiemost/sitemap.xml
