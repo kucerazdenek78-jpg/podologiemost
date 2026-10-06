@@ -263,7 +263,8 @@ header.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
 header.scrolled .logo{color:var(--teal-deep)}
-.logo-mark{width:42px;height:42px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center}
+.logo-mark{width:46px;height:46px;display:block;flex:0 0 46px;border-radius:50%;box-shadow:0 0 0 1.5px rgba(226,201,163,.55),0 4px 10px rgba(0,0,0,.18)}
+.logo-mark svg{display:block}
 .logo-text{font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;line-height:1}
 .logo-text small{display:block;font-family:Manrope,sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.8;margin-top:4px}
 .menu{display:flex;gap:30px;list-style:none;align-items:center}
@@ -515,9 +516,7 @@ footer a:hover{color:#e2c9a3}
 <header id="top">
   <div class="wrap nav">
     <a href="#top" class="logo" aria-label="Podologie Most – úvod">
-      <span class="logo-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 21c-3 0-4.5-2.5-4-6 .4-3 1.5-5 1.5-8C6.5 4.5 8 3 10 3s3 1.6 3 4c0 2.6-1.2 4.4-1.2 7 0 2.4 1.2 3.5 1.2 4.8C13 20 11.5 21 9 21z"/><circle cx="16" cy="5" r="1.2"/><circle cx="18.2" cy="8" r="1"/><circle cx="19" cy="11.2" r=".9"/></svg>
-      </span>
+      <span class="logo-mark"><svg width="46" height="46" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="#1f403c"/><circle cx="50" cy="50" r="41.5" fill="none" stroke="#d9b98a" stroke-width=".9" stroke-opacity=".6"/><path d="M43.5 84c-9.2 0-13.8-7.1-12.8-16.8.9-8.1 4.9-13.1 4.9-21.7C35.6 35.4 41 28.5 48.6 28.5c7.2 0 11.7 5.7 11.7 13.2 0 8.7-4.7 14.1-4.7 22 0 6.9 3.5 9.8 3.5 13.6 0 4.6-5.1 6.7-15.6 6.7z" fill="#d9b98a"/><circle cx="47.6" cy="19.6" r="5.1" fill="#d9b98a"/><circle cx="57.6" cy="20.9" r="4.0" fill="#d9b98a"/><circle cx="64.9" cy="25.6" r="3.35" fill="#d9b98a"/><circle cx="69.3" cy="31.9" r="2.85" fill="#d9b98a"/><circle cx="71.2" cy="38.8" r="2.4" fill="#d9b98a"/><path d="M62.5 76.5c6.2-.8 11.2-5.6 12.6-12.3-6.6.7-11.6 5.4-12.6 12.3z" fill="#d9b98a"/><path d="M62.5 76.5c3.4-3.6 7.2-7.6 11.4-11.2" stroke="#1f403c" stroke-width=".9" fill="none" stroke-linecap="round"/></svg></span>
       <span class="logo-text">Podologie Most<small>Odborná péče o nohy</small></span>
     </a>
     <button class="burger" aria-label="Menu" onclick="document.querySelector('.menu').classList.toggle('open')">
@@ -929,7 +928,7 @@ footer a:hover{color:#e2c9a3}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#top" class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 21c-3 0-4.5-2.5-4-6 .4-3 1.5-5 1.5-8C6.5 4.5 8 3 10 3s3 1.6 3 4c0 2.6-1.2 4.4-1.2 7 0 2.4 1.2 3.5 1.2 4.8C13 20 11.5 21 9 21z"/><circle cx="16" cy="5" r="1.2"/><circle cx="18.2" cy="8" r="1"/><circle cx="19" cy="11.2" r=".9"/></svg></span><span class="logo-text">Podologie Most<small>Odborná péče o nohy</small></span></a>
+        <a href="#top" class="logo"><span class="logo-mark"><svg width="46" height="46" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="#1f403c"/><circle cx="50" cy="50" r="41.5" fill="none" stroke="#d9b98a" stroke-width=".9" stroke-opacity=".6"/><path d="M43.5 84c-9.2 0-13.8-7.1-12.8-16.8.9-8.1 4.9-13.1 4.9-21.7C35.6 35.4 41 28.5 48.6 28.5c7.2 0 11.7 5.7 11.7 13.2 0 8.7-4.7 14.1-4.7 22 0 6.9 3.5 9.8 3.5 13.6 0 4.6-5.1 6.7-15.6 6.7z" fill="#d9b98a"/><circle cx="47.6" cy="19.6" r="5.1" fill="#d9b98a"/><circle cx="57.6" cy="20.9" r="4.0" fill="#d9b98a"/><circle cx="64.9" cy="25.6" r="3.35" fill="#d9b98a"/><circle cx="69.3" cy="31.9" r="2.85" fill="#d9b98a"/><circle cx="71.2" cy="38.8" r="2.4" fill="#d9b98a"/><path d="M62.5 76.5c6.2-.8 11.2-5.6 12.6-12.3-6.6.7-11.6 5.4-12.6 12.3z" fill="#d9b98a"/><path d="M62.5 76.5c3.4-3.6 7.2-7.6 11.4-11.2" stroke="#1f403c" stroke-width=".9" fill="none" stroke-linecap="round"/></svg></span><span class="logo-text">Podologie Most<small>Odborná péče o nohy</small></span></a>
         <p>Podologická a profesionální pedikúra v novém salonu v ulici Višňová v Mostě.</p>
       </div>
       <div>
