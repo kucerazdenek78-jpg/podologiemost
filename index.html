@@ -157,6 +157,17 @@ header.scrolled .burger{color:var(--ink)}
 @media (max-width:980px){.salon-grid{grid-template-columns:1fr;gap:40px}}
 @media (max-width:760px){.salon-feats{grid-template-columns:1fr}.gallery{grid-template-rows:180px 180px}}
 
+/* ---------- Domů ---------- */
+.home-visit{background:var(--sand)}
+.hv-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hv-card{background:var(--white);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow)}
+.hv-card h3{font-size:1.6rem;margin-bottom:14px}
+.hv-card ul{list-style:none;display:grid;gap:12px;margin-bottom:26px}
+.hv-card li{display:flex;gap:12px;color:var(--ink-soft)}
+.hv-card li::before{content:"";flex:0 0 9px;height:9px;border-radius:50%;background:var(--gold);margin-top:9px}
+@media (max-width:980px){.hv-grid{grid-template-columns:1fr;gap:34px}}
+@media (max-width:760px){.hv-card{padding:28px 22px}}
+
 /* ---------- Services ---------- */
 .services{background:var(--sand)}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:52px;flex-wrap:wrap}
@@ -427,7 +438,7 @@ footer a:hover{color:#e2c9a3}
         <div class="feat">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
           <h3>Nově zrekonstruováno</h3>
-          <p>Prostory prošly kompletní rekonstrukcí přímo pro potřeby péče o tělo.</p>
+          <p>Prostory prošly kompletní rekonstrukcí přímo pro potřeby péče o tělo. Salon je v suterénu s vlastním vstupem.</p>
         </div>
         <div class="feat">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -441,6 +452,27 @@ footer a:hover{color:#e2c9a3}
       <div class="ph big">Fotka salonu<br>(připravujeme)</div>
       <div class="ph">Podologické křeslo<br>(foto připravujeme)</div>
       <div class="ph">Vybavení<br>(foto připravujeme)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NÁVŠTĚVA DOMA ================= -->
+<section class="home-visit" id="doma">
+  <div class="wrap hv-grid">
+    <div class="reveal">
+      <span class="eyebrow">Ošetření u vás doma</span>
+      <h2>Přijedeme za vámi – v pohodlí domova</h2>
+      <p class="lead" style="margin-top:18px">Salon je v suterénu s vlastním vstupem a bohužel není bezbariérový. Pokud jsou pro vás schody překážkou, rádi vás ošetříme přímo u vás doma.</p>
+    </div>
+    <div class="hv-card reveal">
+      <h3>Pro koho je návštěva doma vhodná</h3>
+      <ul>
+        <li>Senioři a klienti se sníženou pohyblivostí</li>
+        <li>Klienti po úrazu nebo operaci</li>
+        <li>Diabetici a klienti, pro které je cesta do salonu obtížná</li>
+        <li>Každý, kdo dává přednost ošetření v klidu domova</li>
+      </ul>
+      <a href="tel:+420778429329" class="btn btn-dark">Domluvit návštěvu doma</a>
     </div>
   </div>
 </section>
@@ -489,6 +521,10 @@ footer a:hover{color:#e2c9a3}
         <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 4 6 6 6 10a6 6 0 01-12 0c0-4 3-6 6-10z"/></svg></div>
         <h3>Klasická pedikúra</h3>
         <p>Pravidelná péče o nehty a pokožku chodidel, zakončená hydratací a regeneračním krémem.</p></article>
+      <article class="card reveal"><span class="num">10</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>Ošetření u vás doma</h3>
+        <p>Pro klienty, kteří se do salonu obtížně dostanou – přijedeme za vámi.</p></article>
     </div>
   </div>
 </section>
@@ -548,6 +584,7 @@ footer a:hover{color:#e2c9a3}
       <div class="price-row"><span>Odstranění kuřího oka</span><span>připravujeme</span></div>
       <div class="price-row"><span>Ošetření ztluštělého / mykotického nehtu</span><span>připravujeme</span></div>
       <div class="price-row"><span>Ošetření prasklin na patách</span><span>připravujeme</span></div>
+      <div class="price-row"><span>Návštěva u vás doma</span><span>připravujeme</span></div>
     </div>
     <p class="price-info">Kompletní ceník zveřejníme před otevřením salonu. Informace vám rádi sdělíme telefonicky.</p>
   </div>
@@ -573,6 +610,8 @@ footer a:hover{color:#e2c9a3}
         <p>Ano. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích.</p></details>
       <details class="reveal"><summary>Jak se mám na návštěvu připravit?</summary>
         <p>Stačí přijít s čistýma nohama a bez laku na nehtech, pokud je to možné. Pokud nosíte vložky nebo máte lékařské zprávy k problému nohou, vezměte je s sebou.</p></details>
+      <details class="reveal"><summary>Je salon bezbariérový?</summary>
+        <p>Bohužel ne – salon je v suterénu s vlastním vstupem. Pokud pro vás schody představují problém, nabízíme ošetření přímo u vás doma. Stačí zavolat a domluvíme se.</p></details>
       <details class="reveal"><summary>Jak se objednám?</summary>
         <p>Nejlépe telefonicky. Domluvíme termín i to, s čím za mnou přicházíte, abych si na vás mohla vyhradit dostatek času.</p></details>
     </div>
@@ -591,11 +630,15 @@ footer a:hover{color:#e2c9a3}
       </div>
       <div class="row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        <div><strong>Adresa salonu</strong>Višňová, 434 01 Most<br><small style="color:var(--ink-soft)">přesnou adresu a popis cesty doplníme</small></div>
+        <div><strong>Adresa salonu</strong>Višňová, 434 01 Most<br><small style="color:var(--ink-soft)">suterén s vlastním vstupem (není bezbariérový) · přesnou adresu a popis cesty doplníme</small></div>
       </div>
       <div class="row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         <div><strong>Ordinační doba</strong>po telefonické domluvě</div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        <div><strong>Návštěva doma</strong>ošetření i u vás doma – po domluvě</div>
       </div>
       <div class="row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
