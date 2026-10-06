@@ -81,6 +81,16 @@ header.scrolled .burger{color:var(--ink)}
 .hero.has-video .hero-video{opacity:1}
 .hero.has-video .slide .bg{opacity:.25}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,34,32,.78) 0%,rgba(18,34,32,.35) 60%,rgba(18,34,32,.15) 100%);pointer-events:none}
+/* Videa o péči o nohy – pravá strana */
+.hero-media{position:absolute;top:0;right:0;bottom:0;width:58%;z-index:1;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease;filter:saturate(.85) contrast(1.02)}
+.hero-media video.active{opacity:1}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,64,60,.35),rgba(31,64,60,.15) 40%,rgba(31,64,60,.55));mix-blend-mode:multiply}
+.hero.has-media .slide .art{opacity:0}
+.hero.has-video .hero-media{display:none}
+.hero-credit{position:absolute;right:20px;bottom:14px;z-index:3;font-size:.68rem;color:rgba(255,255,255,.45)}
+.hero-credit a{text-decoration:none}
 .hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:120px 20px 80px;width:100%}
 .hero-text{max-width:680px}
 .hero-text .eyebrow{color:#e2c9a3}
@@ -217,6 +227,7 @@ footer a:hover{color:#e2c9a3}
   .strip-item{border-right:0;border-bottom:1px solid var(--line)}
   .hero-badges{gap:20px}
   .slide .art{width:120vw;right:-40%;opacity:.1}
+  .hero-media{width:100%;opacity:.38;-webkit-mask-image:none;mask-image:none}
   .price-row{padding:18px 20px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -269,6 +280,13 @@ footer a:hover{color:#e2c9a3}
     </div>
   </div>
 
+  <!-- Videa o péči o nohy (Pexels – licence zdarma i pro komerční použití) -->
+  <div class="hero-media" aria-hidden="true">
+    <video muted playsinline preload="auto" data-src="https://videos.pexels.com/video-files/4855957/4855957-sd_960_540_30fps.mp4"></video>
+    <video muted playsinline preload="none" data-src="https://videos.pexels.com/video-files/7754519/7754519-sd_960_540_30fps.mp4"></video>
+    <video muted playsinline preload="none" data-src="https://videos.pexels.com/video-files/7178435/7178435-sd_960_540_24fps.mp4"></video>
+  </div>
+
   <div class="hero-content">
     <div class="hero-text">
       <div class="slide-captions">
@@ -296,6 +314,7 @@ footer a:hover{color:#e2c9a3}
     <button aria-label="Snímek 2"></button>
     <button aria-label="Snímek 3"></button>
   </div>
+  <div class="hero-credit">Ilustrační videa: <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a></div>
 </section>
 
 <!-- ================= STRIP ================= -->
@@ -548,10 +567,33 @@ const slides=[...document.querySelectorAll('.slide')];
 const captions=[...document.querySelectorAll('.caption')];
 const dots=[...document.querySelectorAll('.hero-dots button')];
 let cur=0,timer;
+// Videa na pravé straně – střídají se spolu se slidy
+const mediaVids=[...document.querySelectorAll('.hero-media video')];
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function showVid(i){
+  if(!mediaVids.length||reduceMotion)return;
+  mediaVids.forEach((v,k)=>{
+    if(k===i){
+      if(!v.src)v.src=v.dataset.src;
+      v.currentTime=0;const p=v.play();if(p)p.catch(()=>{});
+      v.classList.add('active');
+    }else{
+      v.classList.remove('active');setTimeout(()=>{if(!v.classList.contains('active'))v.pause()},1700);
+    }
+  });
+  // předem načíst další video
+  const n=mediaVids[(i+1)%mediaVids.length];if(!n.src){n.preload='auto';n.src=n.dataset.src;}
+}
+if(mediaVids.length&&!reduceMotion){
+  document.getElementById('hero').classList.add('has-media');
+  mediaVids.forEach(v=>{v.loop=true;v.addEventListener('error',()=>v.remove())});
+  showVid(0);
+}
 function go(i){
   slides[cur].classList.remove('active');captions[cur].classList.remove('active');dots[cur].classList.remove('active');
   cur=(i+slides.length)%slides.length;
   slides[cur].classList.add('active');captions[cur].classList.add('active');dots[cur].classList.add('active');
+  showVid(cur%Math.max(mediaVids.length,1));
 }
 function start(){clearInterval(timer);timer=setInterval(()=>go(cur+1),6500)}
 dots.forEach((d,i)=>d.addEventListener('click',()=>{go(i);start()}));
