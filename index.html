@@ -463,6 +463,15 @@ details p{padding:0 0 22px;color:var(--ink-soft)}
 .map{border-radius:var(--radius);overflow:hidden;background:var(--sand);min-height:420px;display:grid;place-items:center;text-align:center;color:var(--ink-soft);padding:30px;border:1px dashed var(--line)}
 .map iframe{width:100%;height:100%;min-height:420px;border:0}
 
+/* ---------- Doporučujeme (partneři) ---------- */
+.partners-band{padding:44px 0;background:#fff;border-top:1px solid var(--line)}
+.partners-band .pb-in{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.partners-band .pb-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.partners-band .pb-card{display:flex;align-items:center;justify-content:center;width:300px;height:104px;padding:16px 24px;text-decoration:none;border-radius:16px;border:1.5px solid #cfd8d2;background:#fff;box-shadow:0 0 0 5px #fff,0 0 0 6px #e5e7e4;transition:.25s}
+.partners-band .pb-card img{max-height:60px;max-width:100%;width:auto;height:auto}
+@media (hover:hover){.partners-band .pb-card:hover{transform:translateY(-2px);border-color:var(--gold)}}
+@media (max-width:700px){.partners-band .pb-card{width:100%;max-width:320px}}
+
 /* ---------- Footer ---------- */
 footer{background:#152b29;color:rgba(255,255,255,.72);padding:60px 0 30px;font-size:.92rem}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -922,6 +931,19 @@ footer a:hover{color:#e2c9a3}
     </div>
   </div>
 </section>
+
+<!-- ================= DOPORUČUJEME ================= -->
+<div class="partners-band">
+  <div class="wrap pb-in">
+    <span class="pb-label">Doporučujeme</span>
+    <a class="pb-card" href="https://www.thaimost.cz/" target="_blank" rel="noopener" title="Thajské masáže Most">
+      <img src="assets/img/partneri/thai-most.png" alt="Thai Most – thajské masáže Most" width="250" height="59" loading="lazy">
+    </a>
+    <a class="pb-card" href="https://bezpecne-dvere.cz/" target="_blank" rel="noopener" title="Bezpečnostní dveře Most, Teplice, Chomutov">
+      <img src="assets/img/partneri/bezpecne-dvere.png" alt="Bezpečné dveře – bezpecne-dvere.cz" width="136" height="60" loading="lazy">
+    </a>
+  </div>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <footer>
