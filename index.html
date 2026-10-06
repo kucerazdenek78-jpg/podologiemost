@@ -143,6 +143,20 @@ header.scrolled .burger{color:var(--ink)}
 .checks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--sand-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f5d58' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat;margin-top:3px}
 .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;color:var(--teal)}
 
+/* ---------- Salon ---------- */
+.salon-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.salon-feats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.feat{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.feat svg{color:var(--gold);margin-bottom:12px}
+.feat h3{font-size:1.25rem;margin-bottom:6px}
+.feat p{font-size:.92rem;color:var(--ink-soft)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.gallery .ph{border-radius:var(--radius);background:linear-gradient(160deg,var(--sand-2),var(--sage));display:grid;place-items:center;text-align:center;color:rgba(29,43,42,.55);font-size:.85rem;padding:16px;overflow:hidden}
+.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery .ph.big{grid-row:span 2;background:linear-gradient(160deg,var(--sage),var(--teal));color:rgba(255,255,255,.8)}
+@media (max-width:980px){.salon-grid{grid-template-columns:1fr;gap:40px}}
+@media (max-width:760px){.salon-feats{grid-template-columns:1fr}.gallery{grid-template-rows:180px 180px}}
+
 /* ---------- Services ---------- */
 .services{background:var(--sand)}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:52px;flex-wrap:wrap}
@@ -263,7 +277,7 @@ footer a:hover{color:#e2c9a3}
     </button>
     <ul class="menu">
       <li><a href="#o-nas">O mně</a></li>
-      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#salon">Salon</a></li><li><a href="#sluzby">Služby</a></li>
       <li><a href="#prubeh">Průběh</a></li>
       <li><a href="#cenik">Ceník</a></li>
       <li><a href="#faq">Časté dotazy</a></li>
@@ -388,6 +402,45 @@ footer a:hover{color:#e2c9a3}
         <li>Individuální přístup a srozumitelné rady pro domácí péči</li>
       </ul>
       <p class="sign">Hana Follprechtová</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SALON ================= -->
+<section id="salon" style="background:var(--white)">
+  <div class="wrap salon-grid">
+    <div class="reveal">
+      <span class="eyebrow">Náš salon</span>
+      <h2>Salon s velkým S</h2>
+      <p class="lead" style="margin-top:18px">Nově zrekonstruovaný salon v ulici Višňová jsme od začátku budovali s jediným cílem – aby péče o vaše nohy probíhala v klidném, čistém a moderně vybaveném prostředí.</p>
+      <div class="salon-feats">
+        <div class="feat">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 18h14M7 18v-5a2 2 0 012-2h6a2 2 0 012 2v5M9 11V7a3 3 0 016 0v4M6 21v-3M18 21v-3"/></svg>
+          <h3>Nové podologické křeslo</h3>
+          <p>Pohodlí pro vás a ideální pozice pro přesné a bezpečné ošetření.</p>
+        </div>
+        <div class="feat">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          <h3>Profesionální přístroje</h3>
+          <p>Zcela nové, špičkové vybavení pro podologické ošetření a přístrojovou pedikúru.</p>
+        </div>
+        <div class="feat">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+          <h3>Nově zrekonstruováno</h3>
+          <p>Prostory prošly kompletní rekonstrukcí přímo pro potřeby péče o tělo.</p>
+        </div>
+        <div class="feat">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Čistota a hygiena</h3>
+          <p>Důraz na dezinfekci a čisté prostředí při každém ošetření.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery reveal">
+      <!-- FOTKY SALONU: nahradit <div class="ph">…</div> za <div class="ph"><img src="assets/img/salon-1.jpg" alt="Salon"></div> -->
+      <div class="ph big">Fotka salonu<br>(připravujeme)</div>
+      <div class="ph">Podologické křeslo<br>(foto připravujeme)</div>
+      <div class="ph">Vybavení<br>(foto připravujeme)</div>
     </div>
   </div>
 </section>
