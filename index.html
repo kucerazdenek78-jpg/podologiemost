@@ -117,6 +117,17 @@ header.scrolled .burger{color:var(--ink)}
 .strip-item h4{font-size:1rem;margin-bottom:4px}
 .strip-item p{font-size:.9rem;color:var(--ink-soft);line-height:1.5}
 
+/* ---------- Pojišťovny ---------- */
+.insurance{padding:70px 0 0}
+.ins-box{display:flex;gap:34px;align-items:flex-start;background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:var(--white);border-radius:var(--radius);padding:44px 48px;box-shadow:var(--shadow)}
+.ins-ico{flex:0 0 76px;height:76px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;color:#e2c9a3}
+.ins-text .eyebrow{color:#e2c9a3}
+.ins-text h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:14px}
+.ins-text p{color:rgba(255,255,255,.85);margin-bottom:10px;max-width:760px}
+.ins-text strong{color:#fff}
+.ins-small{font-size:.88rem;color:rgba(255,255,255,.65)!important;margin-bottom:0!important}
+@media (max-width:760px){.insurance{padding:50px 0 0}.ins-box{flex-direction:column;padding:30px 24px;gap:18px;margin:0 16px;width:auto}.ins-ico{flex-basis:60px;width:60px;height:60px}}
+
 /* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
 .about-visual{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,var(--sage),var(--teal));box-shadow:var(--shadow);display:grid;place-items:center;color:rgba(255,255,255,.85)}
@@ -339,6 +350,21 @@ footer a:hover{color:#e2c9a3}
   </div>
 </section>
 
+<!-- ================= POJIŠŤOVNY ================= -->
+<section class="insurance" id="pojistovny">
+  <div class="wrap ins-box reveal">
+    <div class="ins-ico">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M12 8v8M8 12h8"/></svg>
+    </div>
+    <div class="ins-text">
+      <span class="eyebrow">Příspěvek zdravotní pojišťovny</span>
+      <h2>Na podologické ošetření přispívají zdravotní pojišťovny</h2>
+      <p>Řada zdravotních pojišťoven přispívá svým klientům na podologickou péči a odbornou přístrojovou pedikúru – nejčastěji diabetikům v rámci svých preventivních programů. Například <strong>VZP v roce 2026 přispívá dospělým diabetikům až 3&nbsp;000&nbsp;Kč ročně</strong> (max. 500&nbsp;Kč na jedno ošetření).</p>
+      <p class="ins-small">Výše příspěvku a podmínky se liší podle pojišťovny. Doklad o zaplacení vám vystavíme, rádi poradíme, jak o příspěvek požádat. Aktuální podmínky ověřte u své pojišťovny.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ABOUT ================= -->
 <section id="o-nas">
   <div class="wrap about-grid">
@@ -488,6 +514,8 @@ footer a:hover{color:#e2c9a3}
         <p>Ošetření se provádí co nejšetrněji. Většina klientů pocítí po uvolnění tlaku na nehtový val úlevu. Při silném zánětu nebo hnisání je nutné nejprve navštívit lékaře.</p></details>
       <details class="reveal"><summary>Jak fungují nehtová rovnátka?</summary>
         <p>Rovnátko se nasadí na nehet a jemně nadzvedává jeho okraje, takže nehet postupně roste správným směrem. Léčba vyžaduje pravidelné kontroly, její délka závisí na konkrétním případu.</p></details>
+      <details class="reveal"><summary>Přispěje mi zdravotní pojišťovna?</summary>
+        <p>Mnoho zdravotních pojišťoven na podologické ošetření přispívá, nejčastěji diabetikům. Například VZP v roce 2026 přispívá dospělým diabetikům až 3&nbsp;000&nbsp;Kč ročně (max. 500&nbsp;Kč za ošetření). Podmínky se liší podle pojišťovny – ověřte je prosím u té své. Doklad o zaplacení vám rádi vystavíme.</p></details>
       <details class="reveal"><summary>Jsem diabetik. Mohu k vám přijít?</summary>
         <p>Ano. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích.</p></details>
       <details class="reveal"><summary>Jak se mám na návštěvu připravit?</summary>
