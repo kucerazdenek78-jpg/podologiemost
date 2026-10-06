@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podologie Most | Hana Follprechtová – odborná péče o nohy</title>
+<meta name="description" content="Podologická a profesionální pedikúra v Mostě. Zarůstající nehty, nehtová rovnátka, kuří oka, ztluštělé nehty, péče o diabetickou nohu. Přes 20 let praxe. Nový salon v ulici Višňová.">
+<meta property="og:title" content="Podologie Most – odborná péče o nohy">
+<meta property="og:description" content="Podologická pedikúra v novém salonu v ulici Višňová v Mostě. Přes 20 let praxe.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d2b2a;
+  --ink-soft:#4a5a58;
+  --teal:#2f5d58;
+  --teal-deep:#1f403c;
+  --sage:#8fae9f;
+  --sand:#f4efe7;
+  --sand-2:#ebe3d6;
+  --gold:#b8956a;
+  --white:#ffffff;
+  --line:rgba(29,43,42,.12);
+  --radius:18px;
+  --shadow:0 20px 50px -25px rgba(31,64,60,.35);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4vw,3rem)}
+h3{font-size:1.5rem}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+section{padding:96px 0}
+.lead{font-size:1.12rem;color:var(--ink-soft);max-width:640px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;transition:.25s;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--gold);color:var(--white)}
+.btn-primary:hover{background:#a5825a;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--teal);color:var(--white)}
+.btn-dark:hover{background:var(--teal-deep)}
+
+/* ---------- Header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+header.scrolled .logo{color:var(--teal-deep)}
+.logo-mark{width:42px;height:42px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center}
+.logo-text{font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;line-height:1}
+.logo-text small{display:block;font-family:Manrope,sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.8;margin-top:4px}
+.menu{display:flex;gap:30px;list-style:none;align-items:center}
+.menu a{text-decoration:none;color:var(--white);font-weight:500;font-size:.95rem;opacity:.92}
+header.scrolled .menu a{color:var(--ink)}
+.menu a:hover{opacity:1;color:var(--gold)!important}
+.menu .btn{padding:10px 20px;color:var(--white)!important}
+.burger{display:none;background:none;border:0;color:var(--white);cursor:pointer;padding:8px}
+header.scrolled .burger{color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:var(--white);overflow:hidden;padding:0;background:var(--teal-deep)}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.slide.active{opacity:1}
+.slide .bg{position:absolute;inset:-6%;background-size:cover;background-position:center;transform:scale(1);}
+.slide.active .bg{animation:kenburns 9s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.12) translate(1%,1%)}to{transform:scale(1) translate(0,0)}}
+.slide-1 .bg{background:radial-gradient(circle at 75% 35%,#5c8a80 0,transparent 45%),radial-gradient(circle at 15% 80%,#b8956a55 0,transparent 40%),linear-gradient(135deg,#1f403c,#2f5d58 60%,#3f736b)}
+.slide-2 .bg{background:radial-gradient(circle at 25% 30%,#8fae9f88 0,transparent 45%),radial-gradient(circle at 85% 75%,#b8956a66 0,transparent 40%),linear-gradient(160deg,#243f3b,#355f59 55%,#1d3532)}
+.slide-3 .bg{background:radial-gradient(circle at 70% 70%,#c9a97c66 0,transparent 45%),radial-gradient(circle at 20% 20%,#6f998d77 0,transparent 40%),linear-gradient(120deg,#1a3431,#2b524d 50%,#406f67)}
+.slide .art{position:absolute;right:-4%;top:50%;transform:translateY(-50%);width:min(58vw,720px);opacity:.16;color:#fff}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+.hero.has-video .hero-video{opacity:1}
+.hero.has-video .slide .bg{opacity:.25}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,34,32,.78) 0%,rgba(18,34,32,.35) 60%,rgba(18,34,32,.15) 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:120px 20px 80px;width:100%}
+.hero-text{max-width:680px}
+.hero-text .eyebrow{color:#e2c9a3}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5rem);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:#e2c9a3}
+.hero p{font-size:1.15rem;opacity:.9;max-width:560px;margin-bottom:34px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px}
+.slide-captions{position:relative;min-height:1.8em;margin-bottom:10px}
+.caption{position:absolute;left:0;top:0;opacity:0;transform:translateY(8px);transition:.8s}
+.caption.active{opacity:1;transform:none}
+.hero-dots{position:absolute;z-index:3;left:50%;bottom:34px;transform:translateX(-50%);display:flex;gap:10px}
+.hero-dots button{width:34px;height:4px;border-radius:4px;border:0;background:rgba(255,255,255,.35);cursor:pointer;transition:.3s}
+.hero-dots button.active{background:#e2c9a3;width:54px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:26px;margin-top:54px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18)}
+.hero-badges div{font-size:.9rem;opacity:.85}
+.hero-badges strong{display:block;font-family:"Cormorant Garamond",serif;font-size:2.1rem;color:#e2c9a3;line-height:1}
+
+/* ---------- Intro strip ---------- */
+.strip{background:var(--sand);padding:0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:34px 26px;display:flex;gap:16px;align-items:flex-start;border-right:1px solid var(--line)}
+.strip-item:last-child{border-right:0}
+.strip-item svg{flex:0 0 34px;color:var(--teal)}
+.strip-item h4{font-size:1rem;margin-bottom:4px}
+.strip-item p{font-size:.9rem;color:var(--ink-soft);line-height:1.5}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about-visual{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,var(--sage),var(--teal));box-shadow:var(--shadow);display:grid;place-items:center;color:rgba(255,255,255,.85)}
+.about-visual .ph{text-align:center;padding:30px;font-size:.92rem}
+.about-visual .ph svg{width:90px;margin:0 auto 14px;opacity:.7}
+.about-card{position:absolute;left:-28px;bottom:36px;background:var(--white);padding:22px 26px;border-radius:14px;box-shadow:var(--shadow);color:var(--ink)}
+.about-card strong{font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:var(--teal);line-height:1;display:block}
+.about-card span{font-size:.85rem;color:var(--ink-soft)}
+.about-text p{margin-bottom:18px;color:var(--ink-soft)}
+.about-text h2{margin-bottom:22px}
+.checks{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--sand-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f5d58' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat;margin-top:3px}
+.sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;color:var(--teal)}
+
+/* ---------- Services ---------- */
+.services{background:var(--sand)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:52px;flex-wrap:wrap}
+.sec-head h2{max-width:560px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--white);border-radius:var(--radius);padding:34px 30px;transition:.3s;border:1px solid transparent;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
+.card .ico{width:56px;height:56px;border-radius:14px;background:var(--sand);display:grid;place-items:center;color:var(--teal);margin-bottom:22px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-soft);font-size:.96rem}
+.card .num{position:absolute;right:22px;top:16px;font-family:"Cormorant Garamond",serif;font-size:3rem;color:var(--sand-2);line-height:1}
+
+/* ---------- When ---------- */
+.when-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.symptoms{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.symptom{padding:18px 20px;border:1px solid var(--line);border-radius:14px;font-weight:500;display:flex;gap:12px;align-items:center;font-size:.96rem}
+.symptom span{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:0 0 9px}
+.note{margin-top:26px;padding:20px 22px;border-left:3px solid var(--gold);background:var(--sand);border-radius:0 12px 12px 0;font-size:.94rem;color:var(--ink-soft)}
+
+/* ---------- Process ---------- */
+.process{background:var(--teal-deep);color:var(--white)}
+.process .lead{color:rgba(255,255,255,.75)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px;counter-reset:s}
+.step{padding-top:26px;border-top:1px solid rgba(255,255,255,.2);counter-increment:s}
+.step::before{content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:#e2c9a3;display:block;margin-bottom:10px;line-height:1}
+.step h3{font-size:1.35rem;margin-bottom:8px}
+.step p{font-size:.94rem;color:rgba(255,255,255,.72)}
+
+/* ---------- Pricing ---------- */
+.price-box{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.price-row{display:flex;justify-content:space-between;gap:20px;padding:20px 28px;border-bottom:1px solid var(--line)}
+.price-row:last-child{border-bottom:0}
+.price-row span:last-child{font-weight:600;color:var(--teal);white-space:nowrap}
+.price-row small{display:block;color:var(--ink-soft);font-size:.86rem}
+.price-info{margin-top:18px;font-size:.9rem;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--sand)}
+.faq-list{max-width:820px;margin:50px auto 0}
+details{background:var(--white);border-radius:14px;margin-bottom:12px;padding:0 26px;border:1px solid transparent}
+details[open]{border-color:var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:600;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;color:var(--gold);line-height:1;transition:.3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-info .row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.contact-info .row svg{flex:0 0 26px;color:var(--teal);margin-top:3px}
+.contact-info .row strong{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.contact-info a{text-decoration:none}
+.contact-info .big{font-size:1.4rem;font-weight:700;color:var(--teal)}
+.map{border-radius:var(--radius);overflow:hidden;background:var(--sand);min-height:420px;display:grid;place-items:center;text-align:center;color:var(--ink-soft);padding:30px;border:1px dashed var(--line)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0}
+
+/* ---------- Footer ---------- */
+footer{background:#152b29;color:rgba(255,255,255,.72);padding:60px 0 30px;font-size:.92rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .logo{color:var(--white);margin-bottom:16px}
+footer h4{color:var(--white);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#e2c9a3}
+.copy{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;opacity:.75}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .cards{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .strip-grid{grid-template-columns:1fr 1fr}
+  .strip-item:nth-child(2){border-right:0}
+  .strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .about-grid,.when-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .about-card{left:16px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  section{padding:70px 0}
+  .menu{position:fixed;inset:78px 0 auto 0;background:var(--white);flex-direction:column;gap:0;padding:10px 20px 24px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25);display:none}
+  .menu.open{display:flex}
+  .menu li{width:100%}
+  .menu a{color:var(--ink)!important;display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:14px;justify-content:center;border-bottom:0}
+  .burger{display:block}
+  .cards,.steps,.symptoms,.strip-grid,.foot-grid{grid-template-columns:1fr}
+  .strip-item{border-right:0;border-bottom:1px solid var(--line)}
+  .hero-badges{gap:20px}
+  .slide .art{width:120vw;right:-40%;opacity:.1}
+  .price-row{padding:18px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Podologie Most – úvod">
+      <span class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 21c-3 0-4.5-2.5-4-6 .4-3 1.5-5 1.5-8C6.5 4.5 8 3 10 3s3 1.6 3 4c0 2.6-1.2 4.4-1.2 7 0 2.4 1.2 3.5 1.2 4.8C13 20 11.5 21 9 21z"/><circle cx="16" cy="5" r="1.2"/><circle cx="18.2" cy="8" r="1"/><circle cx="19" cy="11.2" r=".9"/></svg>
+      </span>
+      <span class="logo-text">Podologie Most<small>Odborná péče o nohy</small></span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.menu').classList.toggle('open')">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu">
+      <li><a href="#o-nas">O mně</a></li>
+      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#prubeh">Průběh</a></li>
+      <li><a href="#cenik">Ceník</a></li>
+      <li><a href="#faq">Časté dotazy</a></li>
+      <li><a href="#kontakt" class="btn btn-primary">Objednat se</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO SLIDER ================= -->
+<section class="hero" id="hero">
+  <!-- Video na pozadí: stačí nahrát soubor assets/video/hero.mp4 – web ho automaticky použije -->
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="slides">
+    <div class="slide slide-1 active"><div class="bg"></div>
+      <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/><path d="M80 160c-14 0-21-12-19-28 2-14 7-24 7-38 0-12 7-19 16-19s14 8 14 19c0 12-6 21-6 33 0 11 6 16 6 22 0 6-7 11-18 11z"/><circle cx="118" cy="70" r="5"/><circle cx="128" cy="83" r="4"/><circle cx="132" cy="97" r="3.5"/><circle cx="133" cy="110" r="3"/></svg>
+    </div>
+    <div class="slide slide-2"><div class="bg"></div>
+      <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><path d="M60 150c0-50 20-100 40-100s40 50 40 100"/><path d="M70 150c0-40 15-82 30-82s30 42 30 82"/><path d="M82 150c0-28 8-58 18-58s18 30 18 58"/><path d="M40 150h120"/><circle cx="100" cy="100" r="96"/></svg>
+    </div>
+    <div class="slide slide-3"><div class="bg"></div>
+      <svg class="art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><circle cx="100" cy="100" r="96"/><path d="M100 30c20 30 40 45 40 75a40 40 0 01-80 0c0-30 20-45 40-75z"/><path d="M100 70c10 15 20 22 20 37a20 20 0 01-40 0c0-15 10-22 20-37z"/></svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="slide-captions">
+        <span class="eyebrow caption active">Nový salon · Višňová, Most</span>
+        <span class="eyebrow caption">Zarůstající nehty · Kuří oka · Mozoly</span>
+        <span class="eyebrow caption">Přes 20 let zkušeností</span>
+      </div>
+      <h1>Zdravé nohy <em>v odborných</em> rukou</h1>
+      <p>Podologická a profesionální pedikúra v nově zrekonstruovaném salonu v Mostě. Řešíme problémy, se kterými si běžná pedikúra neporadí – šetrně, bezpečně a s individuálním přístupem.</p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn btn-primary">Objednat ošetření
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#sluzby" class="btn btn-ghost">Nabídka služeb</a>
+      </div>
+      <div class="hero-badges">
+        <div><strong>20+</strong>let praxe v pedikúře</div>
+        <div><strong>Podologie</strong>úspěšně složená zkouška</div>
+        <div><strong>Nový</strong>zrekonstruovaný salon</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-dots" role="tablist" aria-label="Přepínání snímků">
+    <button class="active" aria-label="Snímek 1"></button>
+    <button aria-label="Snímek 2"></button>
+    <button aria-label="Snímek 3"></button>
+  </div>
+</section>
+
+<!-- ================= STRIP ================= -->
+<section class="strip">
+  <div class="wrap strip-grid">
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><h4>Hygiena a bezpečí</h4><p>Důsledná dezinfekce a čisté prostředí.</p></div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div><h4>Čas na vás</h4><p>Každé ošetření bez spěchu a s konzultací.</p></div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+      <div><h4>Nový salon</h4><p>Moderně zrekonstruované prostory.</p></div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg>
+      <div><h4>Šetrný přístup</h4><p>Vhodné i pro seniory a diabetiky.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="o-nas">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <!-- SEM PŘIJDE FOTKA: <img src="assets/img/hana.jpg" alt="Hana Follprechtová"> -->
+      <div class="ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
+        Místo pro fotografii<br>Hany nebo salonu
+      </div>
+      <div class="about-card"><strong>20+</strong><span>let praxe v pedikúře</span></div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">O mně</span>
+      <h2>Péče o nohy je pro mě řemeslo i poslání</h2>
+      <p>Jmenuji se Hana Follprechtová a pedikúře se profesionálně věnuji již více než dvacet let. Za tu dobu jsem se setkala s nejrůznějšími problémy nohou a nehtů – a právě proto jsem se rozhodla své znalosti prohloubit v oboru podologie.</p>
+      <p>Absolvovala jsem kurz podologie zakončený úspěšnou zkouškou. Díky tomu dnes mohu nabídnout nejen klasickou a přístrojovou pedikúru, ale i odborné ošetření problematických nehtů a pokožky.</p>
+      <ul class="checks">
+        <li>Více než 20 let praxe v profesionální pedikúře</li>
+        <li>Kurz podologie s úspěšně složenou zkouškou</li>
+        <li>Nově zrekonstruovaný salon v ulici Višňová v Mostě</li>
+        <li>Individuální přístup a srozumitelné rady pro domácí péči</li>
+      </ul>
+      <p class="sign">Hana Follprechtová</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="sluzby">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Služby</span><h2>S čím vám mohu pomoci</h2></div>
+      <p class="lead">Každé ošetření začíná prohlédnutím nohou a krátkou konzultací. Teprve pak společně zvolíme vhodný postup.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><span class="num">01</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></div>
+        <h3>Podologická konzultace</h3>
+        <p>Posouzení stavu nohou, nehtů a pokožky. Doporučení vhodného ošetření a domácí péče.</p></article>
+      <article class="card reveal"><span class="num">02</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c4-2 6-6 7-10M20 4l-6 6M14 4h6v6"/></svg></div>
+        <h3>Zarůstající nehty</h3>
+        <p>Šetrné ošetření bolestivého zarůstajícího nehtu a uvolnění tlaku na nehtový val.</p></article>
+      <article class="card reveal"><span class="num">03</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 15c3-6 11-6 14 0"/><path d="M8 15v3M16 15v3M12 12v6"/></svg></div>
+        <h3>Nehtová rovnátka</h3>
+        <p>Neinvazivní korekce (ortonyxie) – rovnátko nehet postupně narovnává a učí ho správně růst.</p></article>
+      <article class="card reveal"><span class="num">04</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Kuří oka a mozoly</h3>
+        <p>Odborné odstranění kuřího oka včetně jádra a šetrné snížení ztvrdlé kůže.</p></article>
+      <article class="card reveal"><span class="num">05</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="4" width="12" height="16" rx="5"/><path d="M6 10h12"/></svg></div>
+        <h3>Ztluštělé a mykotické nehty</h3>
+        <p>Přístrojové ztenčení a vyčištění zesílených nebo plísní napadených nehtů pro větší komfort.</p></article>
+      <article class="card reveal"><span class="num">06</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 4c-2 5 2 7 0 10s1 6 4 6M13 4l-2 4 3 3-2 4"/></svg></div>
+        <h3>Praskliny na patách</h3>
+        <p>Odstranění zrohovatělé kůže a ošetření prasklin, aby se pokožka mohla zhojit.</p></article>
+      <article class="card reveal"><span class="num">07</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 11h6M12 8v6"/></svg></div>
+        <h3>Péče o rizikovou nohu</h3>
+        <p>Zvlášť šetrná pedikúra pro diabetiky, seniory a klienty s citlivou pokožkou.</p></article>
+      <article class="card reveal"><span class="num">08</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+        <h3>Přístrojová pedikúra</h3>
+        <p>Suchá pedikúra profesionálním přístrojem – přesná, hygienická a šetrná k pokožce.</p></article>
+      <article class="card reveal"><span class="num">09</span>
+        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c3 4 6 6 6 10a6 6 0 01-12 0c0-4 3-6 6-10z"/></svg></div>
+        <h3>Klasická pedikúra</h3>
+        <p>Pravidelná péče o nehty a pokožku chodidel, zakončená hydratací a regeneračním krémem.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHEN ================= -->
+<section id="kdy">
+  <div class="wrap when-grid">
+    <div class="reveal">
+      <span class="eyebrow">Kdy přijít</span>
+      <h2>Nohy dávají signály. Neodkládejte je.</h2>
+      <p class="lead" style="margin-top:18px">Mnoho potíží s nohama začíná nenápadně a časem se zhoršuje. Včasné odborné ošetření ušetří bolest i čas.</p>
+      <div class="note"><strong>Důležité:</strong> Podologická péče nenahrazuje lékařské vyšetření. Při zánětu, hnisání, otevřené ráně nebo podezření na infekci vyhledejte nejprve lékaře.</div>
+    </div>
+    <div class="symptoms reveal">
+      <div class="symptom"><span></span>Nehet zarůstá nebo bolí</div>
+      <div class="symptom"><span></span>Tlak a bolest při chůzi</div>
+      <div class="symptom"><span></span>Kuří oko nebo mozol</div>
+      <div class="symptom"><span></span>Ztluštělý či zbarvený nehet</div>
+      <div class="symptom"><span></span>Praskliny na patách</div>
+      <div class="symptom"><span></span>Nehty se stáčejí do stran</div>
+      <div class="symptom"><span></span>Diabetes, horší citlivost nohou</div>
+      <div class="symptom"><span></span>Nehty si nedokážete ostříhat sami</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="process" id="prubeh">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#e2c9a3">Průběh ošetření</span>
+      <h2>Jak probíhá návštěva</h2>
+      <p class="lead" style="margin-top:16px">Žádný spěch, žádná překvapení. Vždy víte, co a proč se děje.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Objednání</h3><p>Zavolejte a domluvíme termín, který vám vyhovuje.</p></div>
+      <div class="step reveal"><h3>Konzultace</h3><p>Prohlédnu nohy, zeptám se na potíže a zdravotní stav.</p></div>
+      <div class="step reveal"><h3>Ošetření</h3><p>Šetrně provedu zvolený postup s důrazem na hygienu.</p></div>
+      <div class="step reveal"><h3>Domácí péče</h3><p>Dostanete rady, jak o nohy pečovat a kdy přijít znovu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="cenik">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Ceník</span><h2>Orientační ceník</h2></div>
+      <p class="lead">Přesnou cenu vždy sdělím po prohlédnutí – závisí na rozsahu a náročnosti ošetření.</p>
+    </div>
+    <div class="price-box reveal">
+      <!-- CENY DOPLNIT -->
+      <div class="price-row"><span>Podologická konzultace<small>posouzení stavu a doporučení péče</small></span><span>připravujeme</span></div>
+      <div class="price-row"><span>Klasická / přístrojová pedikúra</span><span>připravujeme</span></div>
+      <div class="price-row"><span>Ošetření zarůstajícího nehtu</span><span>připravujeme</span></div>
+      <div class="price-row"><span>Nehtové rovnátko<small>aplikace / kontrola / výměna</small></span><span>připravujeme</span></div>
+      <div class="price-row"><span>Odstranění kuřího oka</span><span>připravujeme</span></div>
+      <div class="price-row"><span>Ošetření ztluštělého / mykotického nehtu</span><span>připravujeme</span></div>
+      <div class="price-row"><span>Ošetření prasklin na patách</span><span>připravujeme</span></div>
+    </div>
+    <p class="price-info">Kompletní ceník zveřejníme před otevřením salonu. Informace vám rádi sdělíme telefonicky.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="eyebrow">Časté dotazy</span>
+      <h2>Na co se klienti ptají</h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal"><summary>Jaký je rozdíl mezi pedikúrou a podologií?</summary>
+        <p>Pedikúra je pravidelná péče o nehty a pokožku nohou. Podologie se zaměřuje na řešení konkrétních problémů – zarůstající a deformované nehty, kuří oka, ztluštělé nehty nebo péči o rizikovou nohu, například u diabetiků.</p></details>
+      <details class="reveal"><summary>Bolí ošetření zarůstajícího nehtu?</summary>
+        <p>Ošetření se provádí co nejšetrněji. Většina klientů pocítí po uvolnění tlaku na nehtový val úlevu. Při silném zánětu nebo hnisání je nutné nejprve navštívit lékaře.</p></details>
+      <details class="reveal"><summary>Jak fungují nehtová rovnátka?</summary>
+        <p>Rovnátko se nasadí na nehet a jemně nadzvedává jeho okraje, takže nehet postupně roste správným směrem. Léčba vyžaduje pravidelné kontroly, její délka závisí na konkrétním případu.</p></details>
+      <details class="reveal"><summary>Jsem diabetik. Mohu k vám přijít?</summary>
+        <p>Ano. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích.</p></details>
+      <details class="reveal"><summary>Jak se mám na návštěvu připravit?</summary>
+        <p>Stačí přijít s čistýma nohama a bez laku na nehtech, pokud je to možné. Pokud nosíte vložky nebo máte lékařské zprávy k problému nohou, vezměte je s sebou.</p></details>
+      <details class="reveal"><summary>Jak se objednám?</summary>
+        <p>Nejlépe telefonicky. Domluvíme termín i to, s čím za mnou přicházíte, abych si na vás mohla vyhradit dostatek času.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="kontakt">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 style="margin-bottom:20px">Objednejte se</h2>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
+        <div><strong>Telefon</strong><a class="big" href="tel:+420778429329">+420 778 429 329</a></div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><strong>Adresa salonu</strong>Višňová, 434 01 Most<br><small style="color:var(--ink-soft)">přesnou adresu a popis cesty doplníme</small></div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><strong>Ordinační doba</strong>po telefonické domluvě</div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+        <div><strong>Provozovatel</strong>Hana Follprechtová<br>IČ: 87149931</div>
+      </div>
+      <a href="tel:+420778429329" class="btn btn-dark" style="margin-top:28px">Zavolat a objednat se</a>
+    </div>
+    <div class="map reveal">
+      <!-- SEM PŘIJDE MAPA (Google Maps embed) po doplnění přesné adresy -->
+      <div>
+        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="margin:0 auto 12px;color:var(--sage)"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
+        Mapa a fotografie cesty k salonu<br>budou doplněny.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 21c-3 0-4.5-2.5-4-6 .4-3 1.5-5 1.5-8C6.5 4.5 8 3 10 3s3 1.6 3 4c0 2.6-1.2 4.4-1.2 7 0 2.4 1.2 3.5 1.2 4.8C13 20 11.5 21 9 21z"/><circle cx="16" cy="5" r="1.2"/><circle cx="18.2" cy="8" r="1"/><circle cx="19" cy="11.2" r=".9"/></svg></span><span class="logo-text">Podologie Most<small>Odborná péče o nohy</small></span></a>
+        <p>Podologická a profesionální pedikúra v novém salonu v ulici Višňová v Mostě.</p>
+      </div>
+      <div>
+        <h4>Navigace</h4>
+        <ul><li><a href="#o-nas">O mně</a></li><li><a href="#sluzby">Služby</a></li><li><a href="#cenik">Ceník</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul><li><a href="tel:+420778429329">+420 778 429 329</a></li><li>Višňová, 434 01 Most</li><li>Masáže: <a href="https://www.thaimost.cz" target="_blank" rel="noopener">thaimost.cz</a></li></ul>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="year">2026</span> Hana Follprechtová · IČ 87149931</span><span>Podologie Most</span></div>
+  </div>
+</footer>
+
+<script>
+// Header při scrollu
+const header=document.querySelector('header');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Zavření mobilního menu po kliknutí
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
+
+// Hero slider
+const slides=[...document.querySelectorAll('.slide')];
+const captions=[...document.querySelectorAll('.caption')];
+const dots=[...document.querySelectorAll('.hero-dots button')];
+let cur=0,timer;
+function go(i){
+  slides[cur].classList.remove('active');captions[cur].classList.remove('active');dots[cur].classList.remove('active');
+  cur=(i+slides.length)%slides.length;
+  slides[cur].classList.add('active');captions[cur].classList.add('active');dots[cur].classList.add('active');
+}
+function start(){clearInterval(timer);timer=setInterval(()=>go(cur+1),6500)}
+dots.forEach((d,i)=>d.addEventListener('click',()=>{go(i);start()}));
+start();
+
+// Video na pozadí – zobrazí se jen pokud soubor existuje
+const hero=document.getElementById('hero');
+const vid=document.getElementById('heroVideo');
+vid.addEventListener('loadeddata',()=>hero.classList.add('has-video'));
+vid.querySelector('source').addEventListener('error',()=>vid.remove());
+
+// Animace při scrollu
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
