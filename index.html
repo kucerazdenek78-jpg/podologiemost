@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Podologie Most – zarůstající nehty, kuří oka, pedikúra | Hana Follprechtová</title>
+<title>Podologie Most – zarůstající nehty, kuří oka, pedikúra | Bc. Hana Kučerová</title>
 <meta name="description" content="Podologie a profesionální pedikúra v Mostě. Zarůstající nehty, nehtová rovnátka, kuří oka, ztluštělé nehty, péče o diabetickou nohu. Přes 20 let praxe, nový salon na Višňové, ošetření i u vás doma.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="author" content="Hana Follprechtová">
+<meta name="author" content="Bc. Hana Kučerová">
 <meta name="theme-color" content="#1f403c">
 <meta name="geo.region" content="CZ-42">
 <meta name="geo.placename" content="Most">
@@ -42,7 +42,7 @@
   "LocalBusiness"
  ],
  "@id": "https://kucerazdenek78-jpg.github.io/podologiemost/#salon",
- "name": "Podologie Most – Hana Follprechtová",
+ "name": "Podologie Most – Bc. Hana Kučerová",
  "description": "Podologická a profesionální pedikúra v Mostě: zarůstající nehty, nehtová rovnátka, kuří oka, ztluštělé a mykotické nehty, péče o diabetickou nohu. Ošetření i u klienta doma.",
  "url": "https://kucerazdenek78-jpg.github.io/podologiemost/",
  "image": "https://kucerazdenek78-jpg.github.io/podologiemost/assets/og-image.jpg",
@@ -61,8 +61,9 @@
  },
  "founder": {
   "@type": "Person",
-  "name": "Hana Follprechtová",
-  "jobTitle": "Pedikérka se specializací na podologii"
+  "name": "Bc. Hana Kučerová",
+  "jobTitle": "Pedikérka – absolventka Odborného kurzu podologie",
+  "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Osvědčení o úspěšném absolvování Odborného kurzu podologie", "credentialCategory": "certificate", "recognizedBy": {"@type": "Organization", "name": "Česká podologická společnost, z. s."}, "dateCreated": "2026-10-09"}
  },
  "taxID": "87149931",
  "sameAs": [
@@ -188,7 +189,7 @@
    "name": "Jsem diabetik. Mohu k vám přijít?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Ano. Díky zkoušce z podologie mohu ošetřovat i nehty a nohy klientů s cukrovkou. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích."
+    "text": "Ano. Součástí mého Odborného kurzu podologie byla diabetologie, syndrom diabetické nohy i ošetřování nohou a nehtů klientů s diabetem I. a II. typu. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích."
    }
   },
   {
@@ -327,6 +328,19 @@ header.scrolled .burger{color:var(--ink)}
 .strip-item svg{flex:0 0 34px;color:var(--teal)}
 .strip-item h4{font-size:1rem;margin-bottom:4px}
 .strip-item p{font-size:.9rem;color:var(--ink-soft);line-height:1.5}
+
+/* ---------- Osvědčení ---------- */
+.cert{padding:0 0 96px}
+.cert-box{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center;background:var(--sand);border-radius:var(--radius);padding:44px}
+.cert-img{display:block;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(-2deg);transition:.3s;background:#fff}
+.cert-img:hover{transform:rotate(0) scale(1.02)}
+.cert-img img{width:100%;height:auto;display:block}
+.cert h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:10px}
+.cert .lead{margin-bottom:20px}
+.cert-tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 16px}
+.cert-tags span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.88rem;color:var(--ink)}
+.cert-note{font-size:.84rem;color:var(--ink-soft)}
+@media (max-width:860px){.cert-box{grid-template-columns:1fr;padding:30px 22px;gap:30px}.cert-img{max-width:280px;margin:0 auto}}
 
 /* ---------- Pojišťovny ---------- */
 .insurance{padding:70px 0 0}
@@ -584,7 +598,7 @@ footer a:hover{color:#e2c9a3}
       </div>
       <div class="hero-badges">
         <div><strong>20+</strong>let praxe v pedikúře</div>
-        <div><strong>Podologie</strong>složená zkouška z podologie</div>
+        <div><strong>Podologie</strong>osvědčení – Odborný kurz podologie</div>
         <div><strong>Nový</strong>zrekonstruovaný salon</div>
       </div>
     </div>
@@ -639,7 +653,7 @@ footer a:hover{color:#e2c9a3}
 <section id="o-nas">
   <div class="wrap about-grid">
     <div class="about-visual reveal">
-      <!-- SEM PŘIJDE FOTKA: <img src="assets/img/hana.jpg" alt="Hana Follprechtová"> -->
+      <!-- SEM PŘIJDE FOTKA: <img src="assets/img/hana.jpg" alt="Hana Kučerová"> -->
       <div class="ph">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>
         Místo pro fotografii<br>Hany nebo salonu
@@ -649,18 +663,47 @@ footer a:hover{color:#e2c9a3}
     <div class="about-text reveal">
       <span class="eyebrow">O mně</span>
       <h2>Péče o nohy je pro mě řemeslo i poslání</h2>
-      <p>Jmenuji se Hana Follprechtová a pedikúře se profesionálně věnuji již více než dvacet let. Za tu dobu jsem se setkala s nejrůznějšími problémy nohou a nehtů – a právě proto jsem se rozhodla své znalosti prohloubit v oboru podologie.</p>
-      <p>Absolvovala jsem kurz podologie a úspěšně složila zkoušku. Díky tomu dnes mohu nabídnout nejen klasickou a přístrojovou pedikúru, ale i odborné podologické ošetření problematických nehtů a pokožky – včetně péče o nehty a nohy klientů s cukrovkou (diabetická noha).</p>
+      <p>Jmenuji se Hana Kučerová a pedikúře se profesionálně věnuji již více než dvacet let. Za tu dobu jsem se setkala s nejrůznějšími problémy nohou a nehtů – a právě proto jsem se rozhodla své znalosti prohloubit v oboru podologie.</p>
+      <p>V říjnu 2026 jsem úspěšně absolvovala <strong>Odborný kurz podologie</strong> zaměřený na preventivní a rekondiční péči o nohy a nehty. Kurz pořádají PODOLOGIE s.r.o., Sanatorium prof. Arenbergera a Česká podologická společnost. Díky tomu dnes mohu nabídnout nejen klasickou a přístrojovou pedikúru, ale i odborné podologické ošetření problematických nehtů a pokožky – včetně péče o nehty a nohy klientů s cukrovkou (diabetická noha).</p>
       <ul class="checks">
         <li>Více než 20 let praxe v profesionální pedikúře</li>
-        <li>Kurz podologie s úspěšně složenou zkouškou</li>
+        <li>Osvědčení o absolvování Odborného kurzu podologie (Česká podologická společnost, 2026)</li>
         <li>Nově zrekonstruovaný salon v ulici Višňová v Mostě</li>
         <li>Individuální přístup a srozumitelné rady pro domácí péči</li>
       </ul>
-      <p class="sign">Hana Follprechtová</p>
+      <p class="sign">Bc. Hana Kučerová</p>
     </div>
   </div>
 </section>
+
+<!-- ================= OSVĚDČENÍ ================= -->
+<section class="cert" id="osvedceni">
+  <div class="wrap">
+    <div class="cert-box reveal">
+      <a class="cert-img" href="assets/img/osvedceni-podologie.jpg" target="_blank" rel="noopener" title="Zobrazit osvědčení">
+        <img src="assets/img/osvedceni-podologie.jpg" alt="Osvědčení o úspěšném absolvování Odborného kurzu podologie – Bc. Hana Kučerová" width="1000" height="1414" loading="lazy">
+      </a>
+      <div>
+        <span class="eyebrow">Osvědčení</span>
+        <h3>Odborný kurz podologie</h3>
+        <p class="lead">Osvědčení o úspěšném absolvování Odborného kurzu podologie zaměřeného na preventivní a rekondiční péči o nohy a nehty. Vydaly PODOLOGIE s.r.o., Sanatorium prof. Arenbergera a Česká podologická společnost, z. s. – Praha, 9. 10. 2026.</p>
+        <strong>Součástí kurzu byla mimo jiné:</strong>
+        <div class="cert-tags">
+          <span>Dermatologie v podologii</span>
+          <span>Diabetologie a syndrom diabetické nohy</span>
+          <span>Ošetřování nohou a nehtů diabetiků</span>
+          <span>Zarůstající nehty a ortonyxie (rovnátka)</span>
+          <span>Nehtové náhrady</span>
+          <span>Korekční pomůcky, ortotika</span>
+          <span>Hygiena a epidemiologie</span>
+          <span>Odběr nehtového materiálu k mykologickému rozboru</span>
+        </div>
+        <p class="cert-note">Ošetření provádím v rámci kompetencí pedikéra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ================= SALON ================= -->
 <section id="salon" style="background:var(--white)">
@@ -757,7 +800,7 @@ footer a:hover{color:#e2c9a3}
       <article class="card reveal"><span class="num">07</span>
         <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/><path d="M9 11h6M12 8v6"/></svg></div>
         <h3>Péče o rizikovou nohu</h3>
-        <p>Odborné ošetření nehtů a nohou diabetiků, seniorů a klientů s citlivou pokožkou – na základě zkoušky z podologie.</p></article>
+        <p>Odborné ošetření nehtů a nohou diabetiků, seniorů a klientů s citlivou pokožkou – součástí kurzu podologie byla diabetologie i syndrom diabetické nohy.</p></article>
       <article class="card reveal"><span class="num">08</span>
         <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
         <h3>Přístrojová pedikúra</h3>
@@ -852,7 +895,7 @@ footer a:hover{color:#e2c9a3}
       <details class="reveal"><summary>Přispěje mi zdravotní pojišťovna?</summary>
         <p>Mnoho zdravotních pojišťoven na podologické ošetření přispívá, nejčastěji diabetikům. Například VZP v roce 2026 přispívá dospělým diabetikům až 3&nbsp;000&nbsp;Kč ročně (max. 500&nbsp;Kč za ošetření). Na požádání vám vystavíme doklad o zaplacení. Podmínky se liší podle pojišťovny, ověřte je prosím u té své.</p></details>
       <details class="reveal"><summary>Jsem diabetik. Mohu k vám přijít?</summary>
-        <p>Ano. Díky zkoušce z podologie mohu ošetřovat i nehty a nohy klientů s cukrovkou. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích.</p></details>
+        <p>Ano. Součástí mého Odborného kurzu podologie byla diabetologie, syndrom diabetické nohy i ošetřování nohou a nehtů klientů s diabetem I. a II. typu. Při ošetření rizikové nohy postupuji zvlášť opatrně. Před ošetřením mě prosím informujte o svém zdravotním stavu a užívaných lécích.</p></details>
       <details class="reveal"><summary>Jak se mám na návštěvu připravit?</summary>
         <p>Stačí přijít s čistýma nohama a bez laku na nehtech, pokud je to možné. Pokud nosíte vložky nebo máte lékařské zprávy k problému nohou, vezměte je s sebou.</p></details>
       <details class="reveal"><summary>Je salon bezbariérový?</summary>
@@ -918,7 +961,7 @@ footer a:hover{color:#e2c9a3}
       </div>
       <div class="row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
-        <div><strong>Provozovatel</strong>Hana Follprechtová<br>IČ: 87149931</div>
+        <div><strong>Provozovatel</strong>Bc. Hana Kučerová<br>IČ: 87149931</div>
       </div>
       <a href="tel:+420778429329" class="btn btn-dark" style="margin-top:28px">Zavolat a objednat se</a>
     </div>
@@ -962,7 +1005,7 @@ footer a:hover{color:#e2c9a3}
         <ul><li><a href="tel:+420778429329">+420 778 429 329</a></li><li>Višňová, 434 01 Most</li><li>Masáže: <a href="https://www.thaimost.cz" target="_blank" rel="noopener">thaimost.cz</a></li></ul>
       </div>
     </div>
-    <div class="copy"><span>© <span id="year">2026</span> Hana Follprechtová · IČ 87149931</span><span>Podologie Most</span></div>
+    <div class="copy"><span>© <span id="year">2026</span> Bc. Hana Kučerová · IČ 87149931</span><span>Podologie Most</span></div>
   </div>
 </footer>
 

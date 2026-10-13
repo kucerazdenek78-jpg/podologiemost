@@ -1,6 +1,6 @@
 # Podologie Most
 
-Prezentační web – podologie a profesionální pedikúra, Hana Follprechtová, salon Višňová, Most.
+Prezentační web – podologie a profesionální pedikúra, Bc. Hana Kučerová, salon Višňová, Most.
 
 ## Co doplnit
 - **Video na pozadí:** nahrát soubor `assets/video/hero.mp4` (web ho sám použije, jinak běží animované slidy)
